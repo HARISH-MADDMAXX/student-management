@@ -81,7 +81,7 @@ function Form2(props) {
     sessionStorage.setItem("email", impemail);
 
     console.log(impemail);
-    await fetch(`http://localhost:5000/form`, {
+    await fetch(`${process.env.REACT_APP_BASE_URL}/form`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

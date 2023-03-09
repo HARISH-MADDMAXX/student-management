@@ -16,7 +16,7 @@ function ListData({ skill }) {
   const fetchData = async () => {
     // console.log(skillname);
     console.log(year);
-    await fetch(`http://localhost:5000/students/skills`, {
+    await fetch(`${process.env.REACT_APP_BASE_URL}/students/skills`, {
       method: "POST",
       body: JSON.stringify({
         skill: skillname,

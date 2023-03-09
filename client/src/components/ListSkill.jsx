@@ -14,7 +14,7 @@ function ListSkills({ count, setCount }) {
 
   const details = async (email) => {
     try {
-      fetch("http://localhost:5000/stud", {
+      fetch(`${process.env.REACT_APP_BASE_URL}/stud`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -40,7 +40,7 @@ function ListSkills({ count, setCount }) {
 
   const getSkills = async (stdid) => {
     try {
-      const response = await fetch("http://localhost:5000/stdskill", {
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/stdskill`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -62,7 +62,7 @@ function ListSkills({ count, setCount }) {
     console.log("delete id : ", id);
   
     try {
-      await fetch(`http://localhost:5000/stdskills/${id}`, {
+      await fetch(`${process.env.REACT_APP_BASE_URL}/stdskills/${id}`, {
         method: "DELETE",
         //  this ` ` allows us to add variables like ${id}
       }).then(() => {

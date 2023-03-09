@@ -13,7 +13,7 @@ const EditSkill = ({ skillId }) => {
     try {
       const body = { rating: rating };
       console.log(body);
-      fetch(`http://localhost:5000/stdskills/${skillId}`, {
+      fetch(`${process.env.REACT_APP_BASE_URL}/stdskills/${skillId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

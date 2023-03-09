@@ -14,7 +14,7 @@ function Inputskill({ setCount }) {
 
   const details = async (email) => {
     try {
-      fetch("http://localhost:5000/stud", {
+      fetch(`${process.env.REACT_APP_BASE_URL}/stud`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -46,7 +46,7 @@ function Inputskill({ setCount }) {
         stud_id: studid,
       };
       console.log(body);
-      await fetch("http://localhost:5000/stdskills", {
+      await fetch(`${process.env.REACT_APP_BASE_URL}/stdskills`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

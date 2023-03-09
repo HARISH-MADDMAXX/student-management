@@ -24,7 +24,7 @@ function Description() {
   const openai = new OpenAIApi(configuration);
 
   const fetchData = async () => {
-    await fetch(`http://localhost:5000/description`, {
+    await fetch(`${process.env.REACT_APP_BASE_URL}/description`, {
       method: "POST",
       body: JSON.stringify({
         name: name,
@@ -77,7 +77,7 @@ function Description() {
     console.log(img);
     const base64 = await convertBase64(img);
     axios
-      .post("http://localhost:5000/uploadImage", { image: base64 })
+      .post(`${process.env.REACT_APP_BASE_URL}/uploadImage`, { image: base64 })
       .then(async (res) => {
         setUrl(res.data);
         console.log("Image uploaded Succesfully. URL :", res.data);
@@ -105,7 +105,7 @@ function Description() {
   };
   const changeImage = async (url) => {
     console.log(url);
-    await fetch(`http://localhost:5000/img`, {
+    await fetch(`${process.env.REACT_APP_BASE_URL}/img`, {
       method: "PUT",
       body: JSON.stringify({
         newimage: url,
