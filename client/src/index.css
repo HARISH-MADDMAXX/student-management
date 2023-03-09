@@ -1,0 +1,137 @@
+
+body{
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+th{
+    color: azure;
+}
+td{
+    color: white;
+}
+.home{
+position: absolute;   
+ top: 35%;
+ left: 37%;
+ background-color: black;
+ height: 30%;
+ width: 30%;
+ border-radius: 15%;
+   
+
+}
+.home1{
+    position: relative;
+    top: 40%;
+}
+
+.formsub{
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top:27%;
+    left: 37%;
+    width: 25%;
+    height: 50%;
+    border-radius: 25%;
+    border-style: double;
+    border-color: aqua;
+
+}
+
+.form1{
+    position: relative;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+}
+
+.label1{
+    color: rgb(127, 242, 248);
+    font-size: 24px;
+}
+
+.logout{
+    margin-top: 30px;
+}
+.search{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    background-color: black;
+    height: 30%;
+    width: 30%;
+    border-radius: 15%;
+}
+
+.entry{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    background-color: black;
+    height: 60%;
+    width: 60%;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.entry1{
+    position: relative;
+    top: 5%;
+    width: 50%;
+    left: 25%;
+}
+
+.entry2{
+    position: relative;
+    top: 5%;
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    left: 25%;
+
+}
+.lbl{
+    color: white;
+
+}
+.imp{
+  text-align: center;
+ width: auto; 
+ position: relative;
+
+ background-color: rgb(0, 0, 0);
+ color: aliceblue;
+}
+.imp1{
+    position:absolute;
+    top: 80%;
+    left: 43%;
+    
+}
+.imp2{
+    background-color: black;
+}
+.pimp{
+   width: auto;
+}
+
+@media (max-width:1400px) {
+
+    /* .formsub{
+        width: auto;
+    } */
+    
+}
+
+@media (max-width:580px) {
+    .formsub{
+        width: auto;
+        left: 20%;
+    }
+
+    
+}
+
