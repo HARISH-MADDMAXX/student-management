@@ -19,7 +19,7 @@ function Description() {
   const [ratings, setRatings] = useState(0);
 
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "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",
   });
   const openai = new OpenAIApi(configuration);
 

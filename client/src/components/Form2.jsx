@@ -7,6 +7,7 @@ import Nav from "./Nav";
 import { motion } from "framer-motion";
 import Loader2 from "../pages/Loader2";
 import Loader from "../pages/Loader";
+import axios from "axios";
 
 function Form2(props) {
   const [input, setinput] = useState({ email: "", password: "" });
@@ -81,15 +82,19 @@ function Form2(props) {
     sessionStorage.setItem("email", impemail);
 
     console.log(impemail);
-    await fetch(`${process.env.REACT_APP_BASE_URL}/form`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
+    // await fetch(`${process.env.REACT_APP_BASE_URL}/form`, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     emailVal: input.email,
+    //   }),
+    // });
+    await axios
+      .post(`${process.env.REACT_APP_BASE_URL}/form`, {
         emailVal: input.email,
-      }),
-    })
+      })
       .then((res) => {
         return res.json();
       })

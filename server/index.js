@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const dotenv = require("dotenv");
+dotenv.config();
 const pool = require("./db");
 const uploadImage = require("./uploadImg");
 // const { query } = require("express");
@@ -23,6 +25,10 @@ app.use(express.json({ limit: "10mb" }));
 //   });
 //   res.send(completion.data.choices[0].text)
 // })
+
+app.get("/", (req, res) => {
+  res.send("RUNNING SUCCESSFULLY");
+});
 
 app.post("/stdskills", async (req, res) => {
   try {
@@ -89,8 +95,6 @@ app.post("/students/skills", async (req, res) => {
     console.log(error.message);
   }
 });
-
-
 
 app.post("/stdskill", async (req, res) => {
   try {
@@ -181,7 +185,6 @@ app.post("/description", async (req, res) => {
     console.log(error.message);
   }
 });
-
 
 app.post("/profile", async (req, res) => {
   try {
