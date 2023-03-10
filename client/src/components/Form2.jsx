@@ -82,19 +82,15 @@ function Form2(props) {
     sessionStorage.setItem("email", impemail);
 
     console.log(impemail);
-    // await fetch(`${process.env.REACT_APP_BASE_URL}/form`, {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     emailVal: input.email,
-    //   }),
-    // });
-    await axios
-      .post(`${process.env.REACT_APP_BASE_URL}/form`, {
+    await fetch(`${process.env.REACT_APP_BASE_URL}/form`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
         emailVal: input.email,
-      })
+      }),
+    })
       .then((res) => {
         return res.json();
       })

@@ -13,7 +13,13 @@ const uploadImage = require("./uploadImg");
 // });
 // const openai = new OpenAIApi(configuration);
 
-app.use(cors());
+app.use(cors(
+//   {
+//   origin:["https://student-management-iota.vercel.app","*"],
+//   methods : ["GET" , "POST" , "PUT" ,"DELETE"],
+//   allowedHeaders:["Content-Type", "Authorization"]
+// }
+));
 app.use(express.json({ limit: "10mb" }));
 
 // app.get("/chat",async(req,res)=>{
