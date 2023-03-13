@@ -5,6 +5,8 @@ const dotenv = require("dotenv");
 dotenv.config();
 const pool = require("./db");
 const uploadImage = require("./uploadImg");
+
+
 // const { query } = require("express");
 // const { Configuration, OpenAIApi } = require("openai");
 

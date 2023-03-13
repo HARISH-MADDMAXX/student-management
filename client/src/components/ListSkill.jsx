@@ -23,7 +23,7 @@ function ListSkills({ count, setCount }) {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data.resp[0])
+          console.log(data.resp[0]);
           setStdId(data.resp[0].stud_id);
           console.log(stdid);
           getSkills(data.resp[0].stud_id);
@@ -40,13 +40,16 @@ function ListSkills({ count, setCount }) {
 
   const getSkills = async (stdid) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/stdskill`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          studentid: stdid,
-        }),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_BASE_URL}/stdskill`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            studentid: stdid,
+          }),
+        }
+      );
       const jsonData = await response.json();
 
       console.log(jsonData);
@@ -60,7 +63,7 @@ function ListSkills({ count, setCount }) {
   //    delete
   const deleteSkill = async (id, skill) => {
     console.log("delete id : ", id);
-  
+
     try {
       await fetch(`${process.env.REACT_APP_BASE_URL}/stdskills/${id}`, {
         method: "DELETE",
@@ -147,11 +150,18 @@ function ListSkills({ count, setCount }) {
             </motion.th>
 
             <motion.th variants={tableheadvariants} whileHover="hover">
+              Approvals
+            </motion.th>
+
+            <motion.th variants={tableheadvariants} whileHover="hover">
               Edit
             </motion.th>
 
             <motion.th variants={tableheadvariants} whileHover="hover">
               Delete
+            </motion.th>
+            <motion.th variants={tableheadvariants} whileHover="hover">
+              works{" "}
             </motion.th>
             {/* <motion.th variants={tableheadvariants} whileHover="hover">
               Profile
@@ -183,6 +193,7 @@ function ListSkills({ count, setCount }) {
                     >
                       {student.rating[index]}
                     </motion.td>
+                    <td>tick</td>
                     <td>
                       <EditSkill skillId={student.skill_ids[index]} />
                     </td>
@@ -196,6 +207,9 @@ function ListSkills({ count, setCount }) {
                       >
                         Delete
                       </button>
+                    </td>
+                    <td>
+                      link
                     </td>
                     {/* <td>
                     <Link to={`/description/${student.name}`}>

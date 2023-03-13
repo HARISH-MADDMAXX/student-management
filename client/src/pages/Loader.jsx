@@ -24,6 +24,7 @@ const dotVariants = {
 
 const Loader = ({ count = 5 }) => {
   return (
+    <div className="mx-auto">
     <motion.div
       variants={containerVariants}
       initial="initial"
@@ -56,6 +57,7 @@ const Loader = ({ count = 5 }) => {
           );
         })}
     </motion.div>
+    </div>
   );
 };
 

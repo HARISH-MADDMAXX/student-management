@@ -210,8 +210,8 @@ function Form2(props) {
           </motion.div>
         </motion.div>
       ) : (
-        <div style={{ position: "absolute", top: " 40%", right: "40%" }}>
-          <Loader />
+<div  className="w-100 mt-5 d-flex align-items-center justify-content-sm-center ml-20 ml-sm-20 ml-md-0 ml-lg-0"
+        style={{ minHeight: "90vh"  }}>          <Loader />
         </div>
       )}
     </Fragment>
