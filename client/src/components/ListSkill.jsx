@@ -149,9 +149,9 @@ function ListSkills({ count, setCount }) {
               Rating
             </motion.th>
 
-            <motion.th variants={tableheadvariants} whileHover="hover">
+            {/* <motion.th variants={tableheadvariants} whileHover="hover">
               Approvals
-            </motion.th>
+            </motion.th> */}
 
             <motion.th variants={tableheadvariants} whileHover="hover">
               Edit
@@ -160,9 +160,9 @@ function ListSkills({ count, setCount }) {
             <motion.th variants={tableheadvariants} whileHover="hover">
               Delete
             </motion.th>
-            <motion.th variants={tableheadvariants} whileHover="hover">
+            {/* <motion.th variants={tableheadvariants} whileHover="hover">
               works{" "}
-            </motion.th>
+            </motion.th> */}
             {/* <motion.th variants={tableheadvariants} whileHover="hover">
               Profile
             </motion.th> */}
@@ -193,7 +193,7 @@ function ListSkills({ count, setCount }) {
                     >
                       {student.rating[index]}
                     </motion.td>
-                    <td>tick</td>
+                    {/* <td>tick</td> */}
                     <td>
                       <EditSkill skillId={student.skill_ids[index]} />
                     </td>
@@ -208,9 +208,9 @@ function ListSkills({ count, setCount }) {
                         Delete
                       </button>
                     </td>
-                    <td>
+                    {/* <td>
                       link
-                    </td>
+                    </td> */}
                     {/* <td>
                     <Link to={`/description/${student.name}`}>
                   {" "}
