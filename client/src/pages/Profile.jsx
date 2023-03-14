@@ -21,7 +21,7 @@ function Profile() {
   const [ratings, setRatings] = useState(0);
 
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "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",
   });
   const openai = new OpenAIApi(configuration);
 

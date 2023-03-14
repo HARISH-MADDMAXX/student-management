@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:18-alpine3.16
 
 # working directory
 
@@ -18,11 +18,11 @@ COPY . .
 
 #build
 
-RUN npm run build
+# RUN npm run build
 
 # expose api port
 
 EXPOSE 5000
 
-CMD ["node","build/index.js"]
+CMD ["npm","start"]
 
