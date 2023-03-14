@@ -127,7 +127,7 @@ function Form2(props) {
   return (
     <Fragment>
       {showDiv ? (
-        <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
+        <motion.div  animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
           <Nav link="/" l="Home" />
           <motion.h1
             variants={credvariants}
@@ -137,11 +137,12 @@ function Form2(props) {
           >
             Enter Your Credentials
           </motion.h1>
+          <div class="col-12 col-md-6 mx-auto">
           <motion.div
             variants={formvariants}
             initial="hidden"
             animate="visible"
-            className=" container w-50 mt-5 border border-info border-3 rounded-5"
+            className=" container w-100 w-md-50 mt-5 border border-info border-3 rounded-5"
           >
             <form
               action=""
@@ -208,6 +209,7 @@ function Form2(props) {
               </button>
             </form>
           </motion.div>
+          </div>
         </motion.div>
       ) : (
 <div  className="w-100 mt-5 d-flex align-items-center justify-content-sm-center ml-20 ml-sm-20 ml-md-0 ml-lg-0"
